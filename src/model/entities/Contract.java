@@ -10,6 +10,10 @@ public class Contract {
 	private Date date;
 	private Double totalValue;
 
+	public List<Installment> getInstallments() {
+		return installments;
+	}
+
 	private List<Installment> installments = new ArrayList<>();
 
 	public Contract() {
