@@ -42,6 +42,16 @@ public class Program {
 			System.out.println(x);
 		}
 
+		System.out.println();
+		double sum = 0.0;
+
+		for (Installment y : contract.getInstallments()) {
+			sum += y.getAmount();
+		}
+
+		System.out.println("Total amount at the end of the contract: $" + String.format("%.2f", sum)
+				+ " (Total interest: $" + String.format("%.2f", sum - contract.getTotalValue()) + ")");
+
 		sc.close();
 
 	}
